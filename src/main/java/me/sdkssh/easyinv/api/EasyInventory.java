@@ -2,6 +2,7 @@ package me.sdkssh.easyinv.api;
 
 import lombok.Getter;
 import me.sdkssh.easyinv.api.items.GuiItem;
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 
@@ -29,4 +30,8 @@ public abstract class EasyInventory {
     public abstract void onClose(Player player);
 
     public abstract void onUpdate(Player player);
+
+    public void open(Player p){
+        this.inventory = Bukkit.createInventory(null, rows*9, inventoryName);
+    }
 }
