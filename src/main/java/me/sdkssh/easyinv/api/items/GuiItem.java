@@ -12,4 +12,8 @@ public class GuiItem {
         this.itemStack = it;
         this.callback = null;
     }
+
+    public void setCallBack(ItemCallback callback) {
+        this.callback = callback;
+    }
 }
