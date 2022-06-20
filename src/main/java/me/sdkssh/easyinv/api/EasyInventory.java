@@ -34,5 +34,6 @@ public abstract class EasyInventory {
     public void open(Player p){
         this.inventory = Bukkit.createInventory(null, rows*9, inventoryName);
         if(!items.isEmpty()) items.forEach((s, g) -> {inventory.setItem(s, g.getItemStack());});
+        p.openInventory(inventory);
     }
 }
