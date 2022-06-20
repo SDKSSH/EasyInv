@@ -18,5 +18,8 @@ public abstract class EasyInventory {
     }
 
     public abstract void onOpen(Player player);
-    
+
+    public abstract void onClose(Player player);
+
+    public abstract void onUpdate(Player player);
 }
